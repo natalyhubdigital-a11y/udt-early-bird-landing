@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>University Discovery Tours Canadá — Próximamente</title>
+<meta name="description" content="El programa de University Discovery Tours en Canadá está por llegar. Dejanos tu correo y te avisamos apenas esté disponible.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER — sin menú de navegación. Sin pastilla de "early bird"
+     (todavía no hay fecha ni precio): pastilla de "Muy pronto".
+============================================================ -->
+<header>
+  <div class="wrap hd">
+    <a href="#top" class="brand">
+      <span class="mk">U</span>
+      <span><b>University Discovery Tours</b><span>Explora · Descubre · Decide</span></span>
+    </a>
+    <div class="hd-right">
+      <span class="deadline-pill"><i></i>Muy pronto</span>
+      <a href="#registro" class="btn">Avisarme</a>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ============================================================
+     HERO — único H1 de la página + formulario de aviso (no de
+     registro: todavía no hay itinerario, universidades ni precio
+     confirmados para Canadá).
+============================================================ -->
+<section class="hero" style="background-image: linear-gradient(100deg, rgba(20, 23, 49, .95) 32%, rgba(20, 23, 49, .78) 62%, rgba(20, 23, 49, .55) 100%), url('assets/img/destino-canada.jpg'); background-position: center 35%; background-size: cover; background-repeat: no-repeat;">
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <span class="eyebrow">Próximamente · Canadá</span>
+      <h1>Tu programa en Canadá está <em>por llegar.</em></h1>
+      <p class="sub">
+        Estamos armando el mismo formato de tours universitarios que ya viven estudiantes en
+        España y Alemania, ahora para Canadá. Dejanos tu correo y sé de los primeros en enterarte.
+      </p>
+      <ul class="trust">
+        <li>Mismo equipo que ya opera en España y Alemania</li>
+        <li>Asesoría migratoria y financiamiento incluidos</li>
+        <li>Reuniones <b>1:1</b> con admisiones</li>
+      </ul>
+    </div>
+
+    <div class="reveal in" id="registro">
+      <div class="formcard">
+        <h2 class="formcard__title">Sé de los primeros en enterarte</h2>
+        <p class="cap">Te avisamos por correo apenas Canadá esté disponible.</p>
+
+        <form class="lead-form" id="lead-form" data-form-location="hero" novalidate>
+          <div class="field">
+            <label for="nombre-hero">Nombre</label>
+            <input type="text" id="nombre-hero" name="nombre" data-field="nombre" required placeholder="Tu nombre" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email-hero">Correo electrónico</label>
+            <input type="email" id="email-hero" name="email" data-field="email" required placeholder="tucorreo@email.com" autocomplete="email">
+          </div>
+
+          <!-- Landing de "avisame": destino fijo + tipo=waitlist para diferenciarlo
+               de un registro real en el backend/hoja de cálculo. -->
+          <input type="hidden" name="destino" value="canada">
+          <input type="hidden" name="tipo" value="waitlist">
+
+          <!-- Campos ocultos de atribución, poblados por js/main.js -->
+          <input type="hidden" name="utm_source" data-utm="utm_source">
+          <input type="hidden" name="utm_medium" data-utm="utm_medium">
+          <input type="hidden" name="utm_campaign" data-utm="utm_campaign">
+          <input type="hidden" name="utm_content" data-utm="utm_content">
+          <input type="hidden" name="utm_term" data-utm="utm_term">
+
+          <!-- Honeypot antibots: invisible para personas, los bots lo completan -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off"
+                 aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
+
+          <button type="submit" class="btn btn-block">Avisarme cuando esté disponible</button>
+          <p id="form-status" role="status" aria-live="polite" style="display:none"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <!-- ============================================================
+       PRÓXIMAMENTE
+  ============================================================ -->
+  <section class="block bg-navy" aria-labelledby="proximamente-h2">
+    <div class="wrap problem-inner reveal">
+      <div class="sec-eyebrow">Próximamente</div>
+      <h2 class="title" id="proximamente-h2">Estamos armando el programa en Canadá.</h2>
+      <p>Universidades aliadas, itinerario y precios — el mismo formato que ya funciona en España y Alemania, adaptado a Canadá. Vas a ser de los primeros en saber la fecha exacta y el precio early bird apenas esté listo.</p>
+      <p class="kick">Dejanos tu correo arriba y te escribimos apenas se habilite el destino.</p>
+      <p style="margin-top:32px;">
+        <a href="#registro" class="btn">Quiero que me avisen</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap ft">
+    <a href="#top" class="brand"><span class="mk">U</span><span><b>University Discovery Tours</b><span>Explora · Descubre · Decide</span></span></a>
+    <div class="ft-note">Datos de contacto (teléfono, horarios) pendientes de tu lado.<br>© <span id="year"></span> University Discovery Tours.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/form-submit.js"></script>
+</body>
+</html>
