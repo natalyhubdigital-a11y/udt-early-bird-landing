@@ -234,6 +234,45 @@ h2.title { font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 900; max-width:
 }
 .dcard--photo:after { display: none; }
 
+/* variante de 3 columnas (en vez de 4) para grillas de destino único,
+   ej. las 3 universidades aliadas de la landing de Alemania */
+@media (min-width: 780px) {
+  .dgrid--3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Itinerario día por día (landings con desglose propio) ---------- */
+
+.itin-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin: 32px 0 46px;
+}
+
+@media (min-width: 700px) {
+  .itin-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.itin-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 26px;
+}
+
+.itin-card .itin-day {
+  display: inline-block;
+  font-weight: 800;
+  color: var(--gold-deep);
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 10px;
+}
+
+.itin-card h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 8px; }
+.itin-card p { color: var(--muted); font-size: .92rem; margin: 0; }
+
 /* testimonios */
 .tgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 44px; }
 .tcard { background: #fff; border-radius: 14px; padding: 28px 26px; border: 1px solid var(--line); position: relative; margin: 0; }

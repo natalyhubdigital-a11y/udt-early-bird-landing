@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>University Discovery Tours Alemania — Conoce tu universidad antes de decidir</title>
+<meta name="description" content="Vive 3 días como universitario en Alemania: conoce desde dentro University of Europe, Young Learners y GISMA antes de elegir. Regístrate al early bird hasta el 31 de agosto.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER — sin menú de navegación: marca + pastilla de urgencia
+     + el único CTA de la página (ancla al formulario).
+============================================================ -->
+<header>
+  <div class="wrap hd">
+    <a href="#top" class="brand">
+      <span class="mk">U</span>
+      <span><b>University Discovery Tours</b><span>Explora · Descubre · Decide</span></span>
+    </a>
+    <div class="hd-right">
+      <span class="deadline-pill"><i></i>Early bird hasta el 31 de agosto</span>
+      <a href="#registro" class="btn">Quiero mi cupo</a>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ============================================================
+     HERO — único H1 de la página + formulario real (id="registro")
+     Landing específica de Alemania: fondo con Múnich.
+============================================================ -->
+<section class="hero" style="background-image: linear-gradient(100deg, rgba(20, 23, 49, .95) 32%, rgba(20, 23, 49, .78) 62%, rgba(20, 23, 49, .55) 100%), url('assets/img/destino-alemania.jpg'); background-position: center 30%; background-size: cover; background-repeat: no-repeat;">
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <span class="eyebrow">3 días · universidades en Alemania</span>
+      <h1>Vive 3 días como universitario en Alemania, <em>antes de decidir.</em></h1>
+      <p class="sub">
+        Un viaje académico para estudiantes: conoce desde dentro las mejores universidades de
+        Alemania, vive la experiencia en el campus y descubre la carrera que te apasiona.
+      </p>
+      <p class="sub" style="font-weight:700;color:#fff;margin-top:14px;">
+        Explora. Descubre. Decide tu futuro.
+      </p>
+      <ul class="trust">
+        <li><b>3</b> días</li>
+        <li><b>3</b> universidades</li>
+        <li><b>+15</b> áreas de estudio</li>
+        <li>Reuniones <b>1:1</b> con admisiones</li>
+      </ul>
+    </div>
+
+    <div class="reveal in" id="registro">
+      <div class="formcard">
+        <h2 class="formcard__title">Aparta tu lugar en Alemania al precio early bird</h2>
+        <p class="cap">El precio sube el 1 de septiembre. Regístrate hoy.</p>
+
+        <div class="countdown" id="countdown-hero">
+          <div class="cd-box"><b data-cd="d">--</b><small>días</small></div>
+          <div class="cd-box"><b data-cd="h">--</b><small>hrs</small></div>
+          <div class="cd-box"><b data-cd="m">--</b><small>min</small></div>
+          <div class="cd-box"><b data-cd="s">--</b><small>seg</small></div>
+        </div>
+
+        <form class="lead-form" id="lead-form" data-form-location="hero" novalidate>
+          <div class="field">
+            <label for="nombre-hero">Nombre</label>
+            <input type="text" id="nombre-hero" name="nombre" data-field="nombre" required placeholder="Tu nombre" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email-hero">Correo electrónico</label>
+            <input type="email" id="email-hero" name="email" data-field="email" required placeholder="tucorreo@email.com" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="telefono-hero">Teléfono</label>
+            <input type="tel" id="telefono-hero" name="telefono" data-field="telefono" required placeholder="+52 / +57 ..." autocomplete="tel">
+          </div>
+
+          <!-- Landing fija a Alemania: no se pregunta destino, va directo en un oculto -->
+          <input type="hidden" name="destino" value="alemania">
+
+          <!-- Campos ocultos de atribución, poblados por js/main.js -->
+          <input type="hidden" name="utm_source" data-utm="utm_source">
+          <input type="hidden" name="utm_medium" data-utm="utm_medium">
+          <input type="hidden" name="utm_campaign" data-utm="utm_campaign">
+          <input type="hidden" name="utm_content" data-utm="utm_content">
+          <input type="hidden" name="utm_term" data-utm="utm_term">
+
+          <!-- Honeypot antibots: invisible para personas, los bots lo completan -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off"
+                 aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
+
+          <button type="submit" class="btn btn-block">Quiero mi cupo early bird</button>
+          <p id="form-status" role="status" aria-live="polite" style="display:none"></p>
+        </form>
+
+        <p class="urg">Precio early bird hasta el <b>31 de agosto</b>. Después sube.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <!-- ============================================================
+       EL PROBLEMA
+  ============================================================ -->
+  <section class="block bg-navy" aria-labelledby="problema-h2">
+    <div class="wrap problem-inner reveal">
+      <div class="sec-eyebrow">El problema</div>
+      <h2 class="title" id="problema-h2">No es un viaje a Alemania. Es la decisión de tu vida.</h2>
+      <p>Vas a invertir años y una cantidad importante de dinero en una universidad en Alemania que probablemente solo has visto en fotos. El campus, el ambiente, el nivel real de los programas, cómo se vive la ciudad: nada de eso se entiende desde una pantalla. Y cuando ya estás inscrito, cambiar de opinión sale caro.</p>
+      <p class="kick">La mayoría decide con folletos y rankings. Tú puedes decidir habiéndolo visto con tus propios ojos.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EL ITINERARIO — desglose de 3 días + modalidades
+  ============================================================ -->
+  <section class="block" id="modalidades" aria-labelledby="itinerario-h2">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="sec-eyebrow">El itinerario</div>
+        <h2 class="title" id="itinerario-h2">Qué pasa en esos 3 días.</h2>
+        <p class="lead">Una experiencia diseñada para que regreses a casa con claridad absoluta.</p>
+      </div>
+
+      <div class="itin-grid reveal">
+        <article class="itin-card">
+          <span class="itin-day">Día 1</span>
+          <h3>Llegada y orientación</h3>
+          <p>Aterrizas en Alemania, conoces el entorno y a tu grupo de UDT antes de empezar el recorrido.</p>
+        </article>
+        <article class="itin-card">
+          <span class="itin-day">Día 2</span>
+          <h3>Campus y universidades aliadas</h3>
+          <p>Recorres los 3 campus, te sientas en clases muestra y conoces de cerca las áreas de estudio disponibles.</p>
+        </article>
+        <article class="itin-card">
+          <span class="itin-day">Día 3</span>
+          <h3>Admisiones y cierre</h3>
+          <p>Reunión 1:1 con admisiones para resolver dudas de ingreso, becas y visa antes de volver a casa.</p>
+        </article>
+      </div>
+
+      <div class="section-photo reveal">
+        <img src="assets/img/estudiantes-campus.jpg" alt="Estudiantes caminando frente a un edificio universitario" loading="lazy">
+      </div>
+
+      <div class="mods reveal">
+        <article class="mod">
+          <h3>Tour Virtual</h3>
+          <p class="modsub">Toda la asesoría sobre estudiar en Alemania, sin el viaje.</p>
+          <ul>
+            <li>Evaluación de perfil por un especialista</li>
+            <li>Selección personalizada de universidades en Alemania</li>
+            <li>Entrevista con el director académico</li>
+            <li>Invitación al proceso de admisión y becas</li>
+            <li>Opciones de financiamiento</li>
+            <li>Asesoría legal sobre trámites migratorios</li>
+            <li>Kit para estudiantes UDT</li>
+          </ul>
+          <div class="priceline">$500 <small>USD</small></div>
+        </article>
+
+        <article class="mod feat">
+          <span class="tag">Experiencia completa</span>
+          <h3>Tour Presencial</h3>
+          <p class="modsub">Todo lo del Virtual, más el viaje a Alemania: boleto de avión y alojamiento incluidos.</p>
+          <ul>
+            <li>Boleto de avión</li>
+            <li>Alojamiento</li>
+            <li>Transporte entre campus</li>
+            <li>Reunión exclusiva con el director de tu facultad</li>
+            <li>Reunión con un abogado de inmigración</li>
+            <li>Descansos para café + Kit UDT</li>
+          </ul>
+          <table class="ptable">
+            <tr><th class="rowh">&nbsp;</th><th>1 persona</th><th>2 personas</th></tr>
+            <tr class="ebrow"><td class="rowh">Early bird<br><small>hasta 31 ago</small></td><td class="eb"><b>$3,000</b></td><td class="eb"><b>$5,300</b></td></tr>
+            <tr><td class="rowh" style="text-decoration:none;color:var(--muted)">Regular<br><small>desde 1 sep</small></td><td class="reg">$3,500</td><td class="reg">$6,000</td></tr>
+          </table>
+          <p class="plan-note">Precios en USD · Planes de pago disponibles · Ideal venir con papá o mamá (2 personas sale más a cuenta).</p>
+        </article>
+
+        <article class="mod">
+          <span class="tag tag--dark">A medida</span>
+          <h3>Paquete Premium</h3>
+          <p class="modsub">Una experiencia en Alemania diseñada a tu medida.</p>
+          <ul>
+            <li>Todo lo del Tour Presencial</li>
+            <li>Itinerario y universidades a tu medida</li>
+            <li>Acompañamiento uno a uno según tu perfil</li>
+          </ul>
+          <div class="priceline priceline--small">A medida <small>según tu solicitud</small></div>
+          <p class="plan-note">Agenda una asesoría personalizada con nuestro equipo para armar tu experiencia.</p>
+          <a href="#registro" class="btn btn-ghost btn-block">Solicitar asesoría personalizada</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       UNIVERSIDADES ALIADAS
+  ============================================================ -->
+  <section class="block bg-cream" aria-labelledby="universidades-h2">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="sec-eyebrow">Universidades aliadas</div>
+        <h2 class="title" id="universidades-h2">3 campus, una experiencia inolvidable.</h2>
+        <p class="lead">
+          Alemania combina universidades de primer nivel con una cultura que se vive en cada
+          calle. La decisión más importante, en el mejor escenario posible.
+        </p>
+      </div>
+
+      <div class="dgrid dgrid--3 reveal">
+        <article class="dcard">
+          <h3>University of Europe for Applied Sciences</h3>
+          <p>Referente en business, health sciences, sport management, technology, design y media. Se caracteriza por una oferta práctica e internacional, con programas en inglés y alemán, y una fuerte orientación al mundo profesional.</p>
+        </article>
+        <article class="dcard">
+          <h3>Young Learners</h3>
+          <p>Referente en inglés académico, preparación lingüística, pathways internacionales y acceso a estudios superiores. Es una puerta de entrada ideal para estudiantes que quieren fortalecer su nivel de idioma y avanzar hacia programas universitarios en el extranjero.</p>
+        </article>
+        <article class="dcard">
+          <h3>GISMA University of Applied Sciences</h3>
+          <p>Abanderada en data science, AI, digital business y formación en negocios internacionales. Su propuesta destaca por programas en inglés con fuerte conexión entre tecnología, negocio y empleabilidad global.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRUEBA SOCIAL
+  ============================================================ -->
+  <section class="block" aria-labelledby="testimonios-h2">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="sec-eyebrow">Historias reales</div>
+        <h2 class="title" id="testimonios-h2">Estudiantes y familias que ya decidieron con certeza.</h2>
+      </div>
+      <div class="tgrid reveal">
+        <blockquote class="tcard">
+          <div class="q">&ldquo;</div>
+          <p>Yo llevaba meses buscando universidades por internet y todo me confundía más. En UDT pude ver el campus, hablar con la universidad y entender si de verdad era para mí. Salí con mucha más claridad y sin sentir que estaba arriesgando mi futuro a ciegas.</p>
+          <footer class="who"><img class="av" src="assets/img/testimonio-suriany.jpg" alt="Suriany Edith García"><div><b>Suriany Edith García</b><small>Estudiante</small></div></footer>
+        </blockquote>
+        <blockquote class="tcard">
+          <div class="q">&ldquo;</div>
+          <p>Me daba miedo irme a otro país y darme cuenta demasiado tarde de que no era la opción correcta. En el tour entendí cómo se vería realmente mi vida allá, conocí la universidad y sentí que ya no estaba decidiendo solo ni a ciegas. Fue el empujón que necesitaba para creerme capaz.</p>
+          <footer class="who"><img class="av" src="assets/img/testimonio-gilberto.jpg" alt="Gilberto González"><div><b>Gilberto González</b><small>Estudiante</small></div></footer>
+        </blockquote>
+        <blockquote class="tcard">
+          <div class="q">&ldquo;</div>
+          <p>Como papá, mi mayor temor era invertir dinero sin confiar del todo en la agencia ni en la universidad. Con UDT vi todo con mis propios ojos, hice preguntas directamente y entendí el proceso completo. Eso me dio la tranquilidad de apoyar la decisión de mi hija.</p>
+          <footer class="who"><img class="av" src="assets/img/testimonio-marcelo.jpg" alt="Marcelo Arzate"><div><b>Marcelo Arzate</b><small>Padre de familia</small></div></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       REDUCTORES DE OBJECIONES + FAQ
+  ============================================================ -->
+  <section class="block bg-cream" aria-labelledby="objeciones-h2">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="sec-eyebrow">Sin barreras</div>
+        <h2 class="title" id="objeciones-h2">Lo que podría frenarte, resuelto.</h2>
+      </div>
+
+      <div class="obj reveal">
+        <article class="ocard">
+          <img class="ocard__logo" src="assets/img/laudex-logo.svg" alt="Logo Laudex" width="120">
+          <h3>"No me alcanza"</h3>
+          <p>
+            El dinero no debería ser la razón por la que te quedes sin conocer tu universidad en
+            Alemania. Con financiamiento Laudex puedes cubrir tu programa en cuotas que se ajustan
+            a tu presupuesto.
+          </p>
+        </article>
+        <article class="ocard">
+          <h3>La visa no la resuelves solo.</h3>
+          <p>
+            Te acompañamos en el proceso migratorio paso a paso, e incluso tienes una reunión con
+            un abogado de inmigración en el tour presencial.
+          </p>
+        </article>
+      </div>
+
+      <div class="faq reveal" id="faq">
+        <h2 class="title faq__title">Preguntas frecuentes</h2>
+
+        <div class="qa">
+          <button type="button" aria-expanded="false">¿Necesito ya tener una universidad elegida en Alemania?</button>
+          <div class="ans"><p>No. El tour existe justamente para ayudarte a decidir entre University of Europe, Young Learners y GISMA.</p></div>
+        </div>
+        <div class="qa">
+          <button type="button" aria-expanded="false">¿El tour incluye el viaje?</button>
+          <div class="ans"><p>Depende de la modalidad: el Virtual es asesoría en línea; el Presencial incluye boleto de avión, alojamiento y transporte entre campus.</p></div>
+        </div>
+        <div class="qa">
+          <button type="button" aria-expanded="false">¿Necesito visa para Alemania?</button>
+          <div class="ans"><p>Depende de tu nacionalidad. Nuestro equipo de asesoría legal y migratoria te orienta paso a paso sobre el trámite que te corresponde.</p></div>
+        </div>
+        <div class="qa">
+          <button type="button" aria-expanded="false">¿Qué pasa si me registro después del 31 de agosto?</button>
+          <div class="ans"><p>Pierdes el precio early bird: el presencial sube de $3,000 a $3,500 USD (1 persona) a partir del 1 de septiembre.</p></div>
+        </div>
+        <div class="qa">
+          <button type="button" aria-expanded="false">¿Puedo ir con mi papá o mamá?</button>
+          <div class="ans"><p>Sí. La tarifa de 2 personas ($5,300 early bird) sale más conveniente que dos individuales.</p></div>
+        </div>
+        <div class="qa">
+          <button type="button" aria-expanded="false">¿Ofrecen financiamiento?</button>
+          <div class="ans"><p>Sí, planes de pago y financiamiento a través de Laudex.</p></div>
+        </div>
+        <div class="qa">
+          <button type="button" aria-expanded="false">¿Cuánto cuesta el Tour Virtual?</button>
+          <div class="ans"><p>$500 USD (solo asesoría, sin viaje).</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CIERRE + CTA FINAL
+  ============================================================ -->
+  <section class="block bg-navy cierre" aria-labelledby="cierre-h2">
+    <div class="wrap reveal">
+      <h2 id="cierre-h2">Decide tu futuro en Alemania habiéndolo visto de cerca.</h2>
+      <p>Tres días pueden ahorrarte años de dudas y una inscripción equivocada. Regístrate antes del 31 de agosto y aparta tu lugar al precio early bird.</p>
+      <p class="urgbig">Desde el 1 de septiembre el presencial sube a $3,500 USD (1 persona) / $6,000 (2 personas).</p>
+
+      <div class="formcard formcard--closing">
+        <div class="countdown" id="countdown-closing">
+          <div class="cd-box"><b data-cd="d">--</b><small>días</small></div>
+          <div class="cd-box"><b data-cd="h">--</b><small>hrs</small></div>
+          <div class="cd-box"><b data-cd="m">--</b><small>min</small></div>
+          <div class="cd-box"><b data-cd="s">--</b><small>seg</small></div>
+        </div>
+
+        <form class="lead-form" id="lead-form" data-form-location="closing" novalidate>
+          <div class="field">
+            <label for="nombre-closing">Nombre</label>
+            <input type="text" id="nombre-closing" name="nombre" data-field="nombre" required placeholder="Tu nombre" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email-closing">Correo electrónico</label>
+            <input type="email" id="email-closing" name="email" data-field="email" required placeholder="tucorreo@email.com" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="telefono-closing">Teléfono</label>
+            <input type="tel" id="telefono-closing" name="telefono" data-field="telefono" required placeholder="+52 / +57 ..." autocomplete="tel">
+          </div>
+
+          <input type="hidden" name="destino" value="alemania">
+
+          <input type="hidden" name="utm_source" data-utm="utm_source">
+          <input type="hidden" name="utm_medium" data-utm="utm_medium">
+          <input type="hidden" name="utm_campaign" data-utm="utm_campaign">
+          <input type="hidden" name="utm_content" data-utm="utm_content">
+          <input type="hidden" name="utm_term" data-utm="utm_term">
+
+          <!-- Honeypot antibots: invisible para personas, los bots lo completan -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off"
+                 aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
+
+          <button type="submit" class="btn btn-block">Quiero mi cupo early bird</button>
+          <p id="form-status" role="status" aria-live="polite" style="display:none"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap ft">
+    <a href="#top" class="brand"><span class="mk">U</span><span><b>University Discovery Tours</b><span>Explora · Descubre · Decide</span></span></a>
+    <div class="ft-note">Datos de contacto (teléfono, horarios) pendientes de tu lado.<br>© <span id="year"></span> University Discovery Tours.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/form-submit.js"></script>
+</body>
+</html>
