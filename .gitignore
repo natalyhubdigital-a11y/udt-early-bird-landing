@@ -1,0 +1,15 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel
+
+# Editores
+.vscode/
+.idea/
+
+# Por si en el futuro se agrega tooling con Node
+node_modules/
+.env
+.env.local
