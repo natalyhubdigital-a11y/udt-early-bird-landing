@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>University Discovery Tours — Conoce tu universidad antes de decidir</title>
-<meta name="description" content="Visita por dentro universidades en el extranjero antes de elegir. 4 días, campus reales, boleto y alojamiento incluidos. Regístrate al early bird hasta el 31 de agosto.">
+<title>University Discovery Tours España — Conoce tu universidad antes de decidir</title>
+<meta name="description" content="Visita por dentro universidades en España antes de elegir. 4 días, campus reales, boleto y alojamiento incluidos. Regístrate al early bird hasta el 31 de agosto.">
 <link rel="icon" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,24 +34,28 @@
 
 <!-- ============================================================
      HERO — único H1 de la página + formulario real (id="registro")
+     Landing específica de España: fondo con Barcelona/Sagrada Familia.
 ============================================================ -->
-<section class="hero">
+<section class="hero" style="background-image: linear-gradient(100deg, rgba(20, 23, 49, .95) 32%, rgba(20, 23, 49, .78) 62%, rgba(20, 23, 49, .55) 100%), url('assets/img/destino-espana.jpg'); background-position: center 30%; background-size: cover; background-repeat: no-repeat;">
   <div class="wrap hero-grid">
     <div class="reveal in">
-      <span class="eyebrow">4 días · campus reales</span>
-      <h1>Conoce por dentro las universidades que estás considerando, <em>antes de decidir.</em></h1>
-      <p class="sub">4 días dentro de campus reales, con reuniones 1:1 con admisiones. Boleto de avión y alojamiento incluidos. Para que elijas con información, no con folletos.</p>
+      <span class="eyebrow">4 días · universidades en España</span>
+      <h1>Conoce por dentro las universidades de España, <em>antes de decidir.</em></h1>
+      <p class="sub">
+        Recorre campus reales en España, reúnete 1:1 con admisiones y resuelve tus dudas de visa
+        y financiamiento — antes de comprometer tu futuro a distancia.
+      </p>
       <ul class="trust">
-        <li><b>4</b> países</li>
-        <li><b>+10</b> universidades aliadas</li>
-        <li><b>1:1</b> con admisiones</li>
+        <li><b>🇪🇸</b> España</li>
+        <li>Reuniones <b>1:1</b> con admisiones</li>
         <li>Boleto y alojamiento incluidos</li>
+        <li>Asesoría migratoria incluida</li>
       </ul>
     </div>
 
     <div class="reveal in" id="registro">
       <div class="formcard">
-        <h2 class="formcard__title">Aparta tu lugar al precio early bird</h2>
+        <h2 class="formcard__title">Aparta tu lugar en España al precio early bird</h2>
         <p class="cap">El precio sube el 1 de septiembre. Regístrate hoy.</p>
 
         <div class="countdown" id="countdown-hero">
@@ -74,16 +78,9 @@
             <label for="telefono-hero">Teléfono</label>
             <input type="tel" id="telefono-hero" name="telefono" data-field="telefono" required placeholder="+52 / +57 ..." autocomplete="tel">
           </div>
-          <div class="field">
-            <label for="destino-hero">Destino de interés</label>
-            <select id="destino-hero" name="destino" data-field="destino" required>
-              <option value="" disabled selected>Elige un destino</option>
-              <option value="espana">España</option>
-              <option value="alemania">Alemania</option>
-              <option value="canada">Canadá</option>
-              <option value="inglaterra">Inglaterra</option>
-            </select>
-          </div>
+
+          <!-- Landing fija a España: no se pregunta destino, va directo en un oculto -->
+          <input type="hidden" name="destino" value="espana">
 
           <!-- Campos ocultos de atribución, poblados por js/main.js -->
           <input type="hidden" name="utm_source" data-utm="utm_source">
@@ -114,8 +111,8 @@
   <section class="block bg-navy" aria-labelledby="problema-h2">
     <div class="wrap problem-inner reveal">
       <div class="sec-eyebrow">El problema</div>
-      <h2 class="title" id="problema-h2">No es un viaje. Es la decisión de tu vida.</h2>
-      <p>Vas a invertir años y una cantidad importante de dinero en una universidad que probablemente solo has visto en fotos. El campus, el ambiente, el nivel real de los programas, cómo se vive la ciudad: nada de eso se entiende desde una pantalla. Y cuando ya estás inscrito, cambiar de opinión sale caro.</p>
+      <h2 class="title" id="problema-h2">No es un viaje a España. Es la decisión de tu vida.</h2>
+      <p>Vas a invertir años y una cantidad importante de dinero en una universidad en España que probablemente solo has visto en fotos. El campus, el ambiente, el nivel real de los programas, cómo se vive la ciudad: nada de eso se entiende desde una pantalla. Y cuando ya estás inscrito, cambiar de opinión sale caro.</p>
       <p class="kick">La mayoría decide con folletos y rankings. Tú puedes decidir habiéndolo visto con tus propios ojos.</p>
     </div>
   </section>
@@ -127,8 +124,8 @@
     <div class="wrap">
       <div class="reveal">
         <div class="sec-eyebrow">Cómo funciona</div>
-        <h2 class="title" id="modalidades-h2">4 días para decidir con certeza.</h2>
-        <p class="lead">Recorres los campus por dentro, te reúnes uno a uno con admisiones, conoces los programas y vives la ciudad donde podrías estudiar. Sales con una comparación real entre tus opciones, no con una corazonada.</p>
+        <h2 class="title" id="modalidades-h2">4 días en España para decidir con certeza.</h2>
+        <p class="lead">Recorres los campus por dentro, te reúnes uno a uno con admisiones, conoces los programas y vives la ciudad española donde podrías estudiar. Sales con una comparación real entre tus opciones, no con una corazonada.</p>
       </div>
 
       <div class="section-photo reveal">
@@ -138,10 +135,10 @@
       <div class="mods reveal">
         <article class="mod">
           <h3>Tour Virtual</h3>
-          <p class="modsub">Toda la asesoría, sin el viaje.</p>
+          <p class="modsub">Toda la asesoría sobre estudiar en España, sin el viaje.</p>
           <ul>
             <li>Evaluación de perfil por un especialista</li>
-            <li>Selección personalizada de opciones educativas</li>
+            <li>Selección personalizada de universidades en España</li>
             <li>Entrevista con el director académico</li>
             <li>Invitación al proceso de admisión y becas</li>
             <li>Opciones de financiamiento</li>
@@ -154,7 +151,7 @@
         <article class="mod feat">
           <span class="tag">Experiencia completa</span>
           <h3>Tour Presencial</h3>
-          <p class="modsub">Todo lo del Virtual, más el viaje: boleto de avión y alojamiento incluidos.</p>
+          <p class="modsub">Todo lo del Virtual, más el viaje a España: boleto de avión y alojamiento incluidos.</p>
           <ul>
             <li>Boleto de avión</li>
             <li>Alojamiento</li>
@@ -174,7 +171,7 @@
         <article class="mod">
           <span class="tag tag--dark">A medida</span>
           <h3>Paquete Premium</h3>
-          <p class="modsub">Una experiencia diseñada a tu medida.</p>
+          <p class="modsub">Una experiencia en España diseñada a tu medida.</p>
           <ul>
             <li>Todo lo del Tour Presencial</li>
             <li>Itinerario y universidades a tu medida</li>
@@ -189,30 +186,30 @@
   </section>
 
   <!-- ============================================================
-       DESTINOS
+       POR QUÉ ESPAÑA (reemplaza a la grilla de 4 países del sitio general)
   ============================================================ -->
-  <section class="block bg-cream" aria-labelledby="destinos-h2">
+  <section class="block bg-cream" aria-labelledby="porque-h2">
     <div class="wrap">
       <div class="reveal">
-        <div class="sec-eyebrow">Destinos</div>
-        <h2 class="title" id="destinos-h2">Elige dónde quieres estudiar.</h2>
+        <div class="sec-eyebrow">Por qué España</div>
+        <h2 class="title" id="porque-h2">Cuatro razones para elegir España.</h2>
       </div>
       <div class="dgrid reveal">
-        <article class="dcard dcard--photo">
-          <h3>España</h3>
-          <p>Idioma en común y cercanía cultural, con universidades reconocidas en toda Europa.</p>
+        <article class="dcard">
+          <h3>Mismo idioma</h3>
+          <p>Te enfocas en adaptarte a la universidad, no a aprender un idioma nuevo desde cero.</p>
         </article>
         <article class="dcard">
-          <h3>Alemania</h3>
-          <p>Educación de prestigio, fuerte en ingeniería y ciencias, con costos accesibles.</p>
+          <h3>Título reconocido en la UE</h3>
+          <p>Un título español se reconoce en toda la Unión Europea, además de en Latinoamérica.</p>
         </article>
         <article class="dcard">
-          <h3>Canadá</h3>
-          <p>Alta calidad de vida y rutas claras para quedarte a trabajar después de estudiar.</p>
+          <h3>Calidad de vida</h3>
+          <p>Ciudades seguras, buen clima y vida estudiantil activa, con costos más accesibles que otros destinos.</p>
         </article>
         <article class="dcard">
-          <h3>Inglaterra</h3>
-          <p>Universidades de las de mayor reputación del mundo y títulos reconocidos en todas partes.</p>
+          <h3>No llegas solo</h3>
+          <p>Compartes el idioma con miles de estudiantes latinoamericanos que ya eligieron España.</p>
         </article>
       </div>
     </div>
@@ -260,12 +257,19 @@
       <div class="obj reveal">
         <article class="ocard">
           <img class="ocard__logo" src="assets/img/laudex-logo.svg" alt="Logo Laudex" width="120">
-          <h3>¿Te preocupa cómo pagarlo?</h3>
-          <p>Ofrecemos planes de pago y opciones de financiamiento a través de Laudex, para que armes el esquema que se ajuste a tu situación.</p>
+          <h3>"No me alcanza"</h3>
+          <p>
+            El dinero no debería ser la razón por la que te quedes sin conocer tu universidad en
+            España. Con financiamiento Laudex puedes cubrir tu programa en cuotas que se ajustan
+            a tu presupuesto.
+          </p>
         </article>
         <article class="ocard">
           <h3>La visa no la resuelves solo.</h3>
-          <p>Te acompañamos en el proceso migratorio paso a paso, e incluso tienes una reunión con un abogado de inmigración en el tour presencial.</p>
+          <p>
+            Te acompañamos en el proceso migratorio paso a paso, e incluso tienes una reunión con
+            un abogado de inmigración en el tour presencial.
+          </p>
         </article>
       </div>
 
@@ -273,7 +277,7 @@
         <h2 class="title faq__title">Preguntas frecuentes</h2>
 
         <div class="qa">
-          <button type="button" aria-expanded="false">¿Necesito ya tener una universidad elegida?</button>
+          <button type="button" aria-expanded="false">¿Necesito ya tener una universidad elegida en España?</button>
           <div class="ans"><p>No. El tour existe justamente para ayudarte a decidir entre tus opciones.</p></div>
         </div>
         <div class="qa">
@@ -281,8 +285,8 @@
           <div class="ans"><p>Depende de la modalidad: el Virtual es asesoría en línea; el Presencial incluye boleto de avión, alojamiento y transporte entre campus.</p></div>
         </div>
         <div class="qa">
-          <button type="button" aria-expanded="false">¿Para qué destinos aplica?</button>
-          <div class="ans"><p>España, Alemania, Canadá e Inglaterra.</p></div>
+          <button type="button" aria-expanded="false">¿Necesito visa para España?</button>
+          <div class="ans"><p>Depende de tu nacionalidad. Nuestro equipo de asesoría legal y migratoria te orienta paso a paso sobre el trámite que te corresponde.</p></div>
         </div>
         <div class="qa">
           <button type="button" aria-expanded="false">¿Qué pasa si me registro después del 31 de agosto?</button>
@@ -309,7 +313,7 @@
   ============================================================ -->
   <section class="block bg-navy cierre" aria-labelledby="cierre-h2">
     <div class="wrap reveal">
-      <h2 id="cierre-h2">Decide tu futuro habiéndolo visto de cerca.</h2>
+      <h2 id="cierre-h2">Decide tu futuro en España habiéndolo visto de cerca.</h2>
       <p>Cuatro días pueden ahorrarte años de dudas y una inscripción equivocada. Regístrate antes del 31 de agosto y aparta tu lugar al precio early bird.</p>
       <p class="urgbig">Desde el 1 de septiembre el presencial sube a $3,500 USD (1 persona) / $6,000 (2 personas).</p>
 
@@ -334,16 +338,8 @@
             <label for="telefono-closing">Teléfono</label>
             <input type="tel" id="telefono-closing" name="telefono" data-field="telefono" required placeholder="+52 / +57 ..." autocomplete="tel">
           </div>
-          <div class="field">
-            <label for="destino-closing">Destino de interés</label>
-            <select id="destino-closing" name="destino" data-field="destino" required>
-              <option value="" disabled selected>Elige un destino</option>
-              <option value="espana">España</option>
-              <option value="alemania">Alemania</option>
-              <option value="canada">Canadá</option>
-              <option value="inglaterra">Inglaterra</option>
-            </select>
-          </div>
+
+          <input type="hidden" name="destino" value="espana">
 
           <input type="hidden" name="utm_source" data-utm="utm_source">
           <input type="hidden" name="utm_medium" data-utm="utm_medium">
