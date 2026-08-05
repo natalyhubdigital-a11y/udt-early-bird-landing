@@ -204,7 +204,7 @@
      para que aparezca igual en todas las páginas del sitio sin
      duplicar el HTML en cada una.
   --------------------------------------------------------- */
-  var WHATSAPP_NUMBER = "525612972014";
+  var WHATSAPP_NUMBER = "525613049262";
   var WHATSAPP_MESSAGE = "Hola, quiero más información sobre los tours de UDT";
 
   function whatsappUrl() {

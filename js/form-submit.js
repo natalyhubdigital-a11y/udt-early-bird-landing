@@ -50,7 +50,7 @@
       } catch (err) {
         status.style.display = 'block';
         status.style.color = '#b00020';
-        status.innerHTML = 'No pudimos enviar tu solicitud. Escríbenos por WhatsApp al <a href="https://wa.me/525612972014">+52 561 297 2014</a>.';
+        status.innerHTML = 'No pudimos enviar tu solicitud. Escríbenos por WhatsApp al <a href="https://wa.me/525613049262">+52 56 1304 9262</a>.';
       } finally {
         if (btn) { btn.disabled = false; btn.textContent = textoOriginal; }
       }
