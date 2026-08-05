@@ -200,12 +200,94 @@
   }
 
   /* ---------------------------------------------------------
+     7. Botón flotante de WhatsApp — se inyecta una sola vez acá
+     para que aparezca igual en todas las páginas del sitio sin
+     duplicar el HTML en cada una.
+  --------------------------------------------------------- */
+  var WHATSAPP_NUMBER = "525612972014";
+  var WHATSAPP_MESSAGE = "Hola, quiero más información sobre los tours de UDT";
+
+  function whatsappUrl() {
+    return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(WHATSAPP_MESSAGE);
+  }
+
+  function initWhatsappFloat() {
+    var link = document.createElement("a");
+    link.href = whatsappUrl();
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.className = "wa-float";
+    link.setAttribute("aria-label", "Escribinos por WhatsApp");
+    link.innerHTML =
+      '<svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true">' +
+      '<path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.34.671 4.523 1.834 6.37L4 29l7.86-1.79A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3Zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10a9.94 9.94 0 0 1-5.06-1.377l-.363-.213-4.66 1.06 1.078-4.55-.238-.374A9.93 9.93 0 0 1 6.004 15c0-5.523 4.477-10 10-10Zm-3.49 5.36c-.207 0-.542.078-.826.39-.284.313-1.084 1.06-1.084 2.585 0 1.526 1.11 3 1.264 3.207.155.207 2.14 3.428 5.29 4.667 2.617 1.03 3.15.826 3.717.775.567-.052 1.83-.748 2.088-1.47.258-.723.258-1.34.181-1.47-.077-.13-.284-.207-.593-.362-.31-.155-1.83-.903-2.114-1.006-.284-.104-.49-.155-.696.155-.207.31-.8 1.006-.981 1.213-.181.207-.362.233-.671.078-.31-.155-1.31-.483-2.494-1.538-.922-.822-1.545-1.837-1.726-2.147-.181-.31-.02-.478.136-.633.14-.14.31-.362.465-.543.155-.181.207-.31.31-.517.104-.207.052-.388-.026-.543-.077-.155-.696-1.688-.955-2.31-.25-.6-.505-.52-.696-.53-.18-.008-.386-.01-.593-.01Z"/>' +
+      "</svg>";
+    document.body.appendChild(link);
+  }
+
+  /* ---------------------------------------------------------
+     8. Modal de la calculadora de financiamiento Laudex.
+     Cualquier elemento con [data-laudex-trigger] abre el modal
+     con un iframe a la calculadora en vez de navegar afuera.
+     Si por algún motivo el JS no corre, el trigger sigue siendo
+     un <a target="_blank"> normal a la misma URL (fallback).
+  --------------------------------------------------------- */
+  var LAUDEX_URL = "https://www.laudex.mx/university-discovery-tour";
+
+  function initLaudexModal() {
+    var triggers = document.querySelectorAll("[data-laudex-trigger]");
+    if (triggers.length === 0) return;
+
+    var overlay = document.createElement("div");
+    overlay.className = "modal-overlay";
+    overlay.innerHTML =
+      '<div class="modal-box" role="dialog" aria-modal="true" aria-label="Calculadora de financiamiento Laudex">' +
+      '<div class="modal-head">' +
+      "<p>Simulá tu financiamiento educativo con Laudex, nuestro aliado financiero, y descubrí cuánto pagarías al mes. La página empieza con la portada de Laudex — deslizá hacia abajo <b>dentro de este recuadro</b> para llegar a la calculadora.</p>" +
+      '<button type="button" class="modal-close" aria-label="Cerrar">&times;</button>' +
+      "</div>" +
+      '<iframe title="Calculadora de financiamiento Laudex" loading="lazy"></iframe>' +
+      "</div>";
+    document.body.appendChild(overlay);
+
+    var iframe = overlay.querySelector("iframe");
+    var closeBtn = overlay.querySelector(".modal-close");
+    var iframeLoaded = false;
+
+    function openModal(ev) {
+      if (ev) ev.preventDefault();
+      if (!iframeLoaded) {
+        iframe.src = LAUDEX_URL;
+        iframeLoaded = true;
+      }
+      overlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      overlay.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    triggers.forEach(function (trigger) { trigger.addEventListener("click", openModal); });
+    closeBtn.addEventListener("click", closeModal);
+    overlay.addEventListener("click", function (ev) {
+      if (ev.target === overlay) closeModal();
+    });
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape" && overlay.classList.contains("open")) closeModal();
+    });
+  }
+
+  /* ---------------------------------------------------------
      Inicialización
   --------------------------------------------------------- */
   document.addEventListener("DOMContentLoaded", function () {
     startCountdowns();
     initFaqAccordion();
     initScrollReveal();
+    initWhatsappFloat();
+    initLaudexModal();
 
     var utms = captureUtms();
     var forms = document.querySelectorAll(".lead-form");

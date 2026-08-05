@@ -69,7 +69,7 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, .08);
 }
 
-.hd { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+.hd { display: flex; align-items: center; justify-content: space-between; height: 78px; }
 .brand { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
 .brand .mk {
   width: 34px; height: 34px; border: 2px solid var(--gold); border-radius: 50%;
@@ -78,11 +78,78 @@ header {
 }
 .brand b { font-weight: 800; font-size: 1rem; letter-spacing: .02em; line-height: 1.05; display: block; }
 .brand span > span { display: block; font-weight: 500; font-size: .62rem; letter-spacing: .18em; color: var(--gold); }
-.hd-right { display: flex; align-items: center; gap: 18px; }
+.brand-logo { height: 56px; width: auto; display: block; }
+.hd-right { display: flex; align-items: center; gap: 14px; }
 .deadline-pill { color: #fff; font-size: .8rem; font-weight: 600; display: flex; align-items: center; gap: 8px; }
 .deadline-pill i { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; display: inline-block; animation: pulse 1.8s infinite; }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
 .hd .btn { padding: 11px 20px; font-size: .9rem; }
+.hd-ghost {
+  display: inline-flex; align-items: center; gap: 6px; background: transparent; color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, .4); padding: 9px 16px; font-size: .85rem; font-weight: 700;
+  border-radius: 8px; text-decoration: none; transition: border-color .15s ease, background .15s ease;
+}
+.hd-ghost:hover { border-color: var(--gold); background: rgba(255, 255, 255, .06); }
+
+/* ---------- Botón flotante de WhatsApp (inyectado por js/main.js) ---------- */
+
+.wa-float {
+  position: fixed; right: 22px; bottom: 22px; z-index: 60;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: #25D366; display: grid; place-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .28);
+  text-decoration: none; animation: wa-pulse 2.4s ease-in-out infinite;
+  transition: transform .15s ease;
+}
+.wa-float:hover { transform: scale(1.07); }
+.wa-float svg { width: 30px; height: 30px; display: block; }
+
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 8px 20px rgba(0, 0, 0, .28), 0 0 0 0 rgba(37, 211, 102, .45); }
+  50% { box-shadow: 0 8px 20px rgba(0, 0, 0, .28), 0 0 0 10px rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 540px) {
+  .wa-float { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+  .wa-float svg { width: 26px; height: 26px; }
+}
+
+/* ---------- Modal calculadora Laudex (inyectado por js/main.js) ---------- */
+
+.laudex-trigger { display: inline-flex; margin-top: 12px; }
+
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 100; background: rgba(20, 23, 49, .72);
+  display: flex; align-items: center; justify-content: center; padding: 24px;
+  opacity: 0; pointer-events: none; transition: opacity .2s ease;
+}
+.modal-overlay.open { opacity: 1; pointer-events: auto; }
+
+.modal-box {
+  position: relative; width: 100%; max-width: 1100px; height: 95vh; max-height: 980px;
+  background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 70px rgba(0, 0, 0, .4);
+  display: flex; flex-direction: column;
+  transform: translateY(16px); transition: transform .2s ease;
+}
+.modal-overlay.open .modal-box { transform: translateY(0); }
+
+.modal-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px; border-bottom: 1px solid var(--line); background: var(--cream);
+}
+.modal-head p { margin: 0; font-size: .85rem; color: var(--muted); padding-right: 16px; }
+.modal-close {
+  flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; border: none;
+  background: var(--navy); color: #fff; font-size: 1.1rem; font-weight: 700; cursor: pointer;
+  display: grid; place-items: center; line-height: 1;
+}
+.modal-close:hover { background: var(--gold-deep); }
+.modal-box iframe { flex: 1; width: 100%; border: 0; }
+
+@media (max-width: 640px) {
+  .modal-overlay { padding: 0; }
+  .modal-box { max-width: none; width: 100%; height: 100vh; max-height: none; border-radius: 0; }
+}
 
 /* ---------- Hero ---------- */
 
@@ -228,9 +295,7 @@ h2.title { font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 900; max-width:
 
 .dcard--photo {
   min-height: 240px; display: flex; flex-direction: column; justify-content: flex-end;
-  background:
-    linear-gradient(180deg, rgba(28, 32, 61, .1) 0%, rgba(20, 23, 49, .92) 78%),
-    url('../assets/img/destino-espana.jpg') center / cover no-repeat;
+  background-size: cover; background-position: center; background-repeat: no-repeat;
 }
 .dcard--photo:after { display: none; }
 
@@ -280,7 +345,7 @@ h2.title { font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 900; max-width:
 .tcard p { font-size: .95rem; color: #3a3f55; margin-bottom: 20px; }
 .tcard .who { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding-top: 16px; }
 .tcard .av { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-.tcard .who b { display: block; font-size: .95rem; font-style: normal; }
+.tcard .who b { display: block; font-size: 1.15rem; font-weight: 800; font-style: normal; }
 .tcard .who small { color: var(--muted); font-size: .8rem; }
 
 /* objeciones + faq */
@@ -329,6 +394,11 @@ footer { background: var(--navy-3); color: #9599b3; padding: 44px 0; font-size: 
   .tgrid { grid-template-columns: 1fr; }
   .obj { grid-template-columns: 1fr; }
   .hd-right .deadline-pill { display: none; }
+}
+
+@media (max-width: 640px) {
+  .hd-right .hd-ghost { display: none; }
+  .brand-logo { height: 44px; }
 }
 
 @media (max-width: 540px) {
