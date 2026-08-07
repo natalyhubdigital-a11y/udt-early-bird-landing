@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>University Discovery Tours — Descubre tu perfil universitario</title>
-<meta name="description" content="No decidas tu universidad desde un brochure. Descubre gratis, en 2 minutos, qué perfil de estudiante eres y qué universidad te conviene en Canadá, Reino Unido, España o Alemania.">
+<title>University Discovery Tours España — Tu plan de desarrollo educativo</title>
+<meta name="description" content="No decidas tu universidad desde un brochure. Obtén gratis tu plan de desarrollo educativo en España y accede a una consultoría personalizada.">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="University Discovery Tours — Descubre tu perfil universitario">
-<meta property="og:description" content="Vive 3 días dentro de universidades reales en Canadá, Reino Unido, España y Alemania. Descubre gratis, en 2 minutos, qué perfil de estudiante eres.">
+<meta property="og:title" content="University Discovery Tours España — Tu plan de desarrollo educativo">
+<meta property="og:description" content="Obtén gratis tu plan de desarrollo educativo en España y accede a una consultoría personalizada con UDT.">
 <meta property="og:image" content="https://udt-early-bird-landing.vercel.app/assets/img/estudiantes-campus.jpg">
 <meta property="og:url" content="https://udt-early-bird-landing.vercel.app/perfil.html">
 <meta property="og:locale" content="es_LA">
@@ -64,15 +64,17 @@ fbq('track', 'PageView');
 ============================================================ -->
 <section class="hero" style="background-image: linear-gradient(100deg, rgba(20, 23, 49, .93) 30%, rgba(20, 23, 49, .8) 65%, rgba(20, 23, 49, .6) 100%), url('assets/img/estudiantes-campus.jpg'); background-position: center 30%; background-size: cover; background-repeat: no-repeat;">
   <div class="wrap" style="padding: 72px 0 64px; text-align: center; max-width: 780px;">
-    <div class="reveal in">
-      <span class="eyebrow" style="justify-content:center;">Canadá 🍁 · Reino Unido 🇬🇧 · España 🇪🇸 · Alemania 🇩🇪</span>
+    <div class="reveal in" style="display:flex; flex-direction:column; align-items:center;">
+      <div class="edition-badge">
+        <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bandera de España">
+          <rect width="3" height="2" fill="#AA151B"/>
+          <rect y="0.5" width="3" height="1" fill="#F1BF00"/>
+        </svg>
+        Edición España
+      </div>
       <h1>No decidas tu universidad desde un brochure.</h1>
-      <p class="sub" style="max-width:56ch; margin-left:auto; margin-right:auto;">
-        Vive 3 días dentro de universidades reales — antes de decidir dónde vas a estudiar.
-        Campus reales, admisiones reales, tu decisión, con certeza.
-      </p>
       <p style="margin-top:30px;">
-        <a href="#formulario" class="btn">Descubre tu perfil universitario →</a>
+        <a href="#formulario" class="btn">Obtén tu plan de desarrollo educativo →</a>
       </p>
       <p class="urg" style="color:#c9ccdd; margin-top:16px;">Cupos limitados — próximos tours 2026.</p>
     </div>
@@ -82,7 +84,39 @@ fbq('track', 'PageView');
 <main>
 
   <!-- ============================================================
-       SECCIÓN 2 — LA TRANSFORMACIÓN
+       SECCIÓN 2 (visualmente primera) — FORMULARIO
+       El pedido del usuario es que el formulario aparezca antes que
+       la sección de transformación, así que va primero en el orden
+       del documento.
+  ============================================================ -->
+  <section class="block reveal" id="formulario" aria-labelledby="form-h2">
+    <div class="wrap container--narrow" style="text-align:center;">
+      <div class="sec-eyebrow" style="justify-content:center;">Plan de desarrollo educativo</div>
+      <h2 class="title" id="form-h2" style="max-width:none;">Obtén tu plan de desarrollo educativo en España y accede a tu consultoría personalizada.</h2>
+      <p class="lead" style="margin-left:auto; margin-right:auto;">100% gratis. Completa el formulario y recibe tu plan de desarrollo educativo en España, con acceso a una consultoría personalizada.</p>
+
+      <div class="form-embed-wrap">
+        <!-- Add this where you want the form -->
+        <div style="width:100%; max-width:900px; margin:0 auto;">
+          <iframe
+            src="https://app.edvisor.io/external/es_co/form/new-form-1785952814600?embed=1"
+            title="Edvisor form"
+            style="width:100%; min-height:900px; border:0;"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <ul class="trust-bullets">
+        <li>Sin fricción</li>
+        <li>Sin spam</li>
+        <li>Resultado inmediato</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCIÓN 3 — LA TRANSFORMACIÓN
   ============================================================ -->
   <section class="block bg-cream reveal" aria-labelledby="transform-h2">
     <div class="wrap container--narrow">
@@ -108,43 +142,14 @@ fbq('track', 'PageView');
         <div class="transform-row">
           <div class="transform-before">No sabes qué universidad te conviene</div>
           <div class="transform-arrow">→</div>
-          <div class="transform-after">Un perfilamiento gratuito te lo dice ahora</div>
+          <div class="transform-after">Tu plan de desarrollo educativo te lo dice ahora</div>
         </div>
       </div>
 
       <p class="authority-line">
-        <b>Global Education</b> — +6 años, 15 países, cientos de estudiantes latinoamericanos
-        guiados hacia una decisión real.
+        Impulsado por <b>Global Education</b> — +10 años, 15 países, cientos de estudiantes
+        latinoamericanos guiados hacia una decisión real.
       </p>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       SECCIÓN 3 — FORMULARIO DE PERFILAMIENTO
-  ============================================================ -->
-  <section class="block reveal" id="formulario" aria-labelledby="form-h2">
-    <div class="wrap container--narrow" style="text-align:center;">
-      <div class="sec-eyebrow" style="justify-content:center;">Perfilamiento gratuito</div>
-      <h2 class="title" id="form-h2" style="max-width:none;">Descubre en 2 minutos qué perfil de estudiante eres y qué universidad te conviene.</h2>
-      <p class="lead" style="margin-left:auto; margin-right:auto;">100% gratis. Recibe tu perfil y una recomendación personalizada de destino y universidad.</p>
-
-      <div class="form-embed-wrap">
-        <!-- Add this where you want the form -->
-        <div style="width:100%; max-width:900px; margin:0 auto;">
-          <iframe
-            src="https://app.edvisor.io/external/es_co/form/new-form-1785952814600?embed=1"
-            title="Edvisor form"
-            style="width:100%; min-height:900px; border:0;"
-            loading="lazy">
-          </iframe>
-        </div>
-      </div>
-
-      <ul class="trust-bullets">
-        <li>Sin fricción</li>
-        <li>Sin spam</li>
-        <li>Resultado inmediato</li>
-      </ul>
     </div>
   </section>
 
@@ -156,14 +161,14 @@ fbq('track', 'PageView');
   ============================================================ -->
   <section class="block bg-navy cierre reveal" id="cierre" aria-labelledby="cierre-h2">
     <div class="wrap">
-      <h2 id="cierre-h2">Tu perfil está en camino. El siguiente paso es tuyo.</h2>
-      <p>Únete a la comunidad UDT en WhatsApp: ahí te compartimos tu recomendación y coordinamos todo lo demás.</p>
+      <h2 id="cierre-h2">Tu plan de desarrollo educativo está en camino. El siguiente paso es tuyo.</h2>
+      <p>Únete a la comunidad UDT en WhatsApp: ahí te compartimos tu plan y coordinamos todo lo demás.</p>
 
       <p style="margin-top:8px;">
         <a href="https://chat.whatsapp.com/TU_LINK_AQUI" target="_blank" rel="noopener noreferrer" class="btn">Únete al grupo de WhatsApp de UDT →</a>
       </p>
 
-      <p class="cierre-sub">En el grupo te compartiremos tu recomendación personalizada y coordinaremos tu sesión gratuita 1:1 con un asesor.</p>
+      <p class="cierre-sub">En el grupo te compartiremos tu plan de desarrollo educativo y coordinaremos tu sesión gratuita 1:1 con un asesor.</p>
 
       <p class="brand-tagline">University Discovery Tours — We turn interest into real decisions to study abroad.</p>
     </div>
@@ -186,7 +191,7 @@ fbq('track', 'PageView');
 
 <!-- CTA flotante sticky en mobile -->
 <div class="sticky-cta">
-  <a href="#formulario" class="btn btn-block">Descubre tu perfil →</a>
+  <a href="#formulario" class="btn btn-block">Obtén tu plan educativo →</a>
 </div>
 
 <script src="js/main.js"></script>
