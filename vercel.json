@@ -1,4 +1,11 @@
 {
+  "rewrites": [
+    { "source": "/espana", "destination": "/espana.html" },
+    { "source": "/alemania", "destination": "/alemania.html" },
+    { "source": "/canada", "destination": "/canada.html" },
+    { "source": "/inglaterra", "destination": "/inglaterra.html" },
+    { "source": "/perfil", "destination": "/perfil.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

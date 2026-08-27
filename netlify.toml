@@ -1,6 +1,31 @@
 [build]
   publish = "."
 
+[[redirects]]
+  from = "/espana"
+  to = "/espana.html"
+  status = 200
+
+[[redirects]]
+  from = "/alemania"
+  to = "/alemania.html"
+  status = 200
+
+[[redirects]]
+  from = "/canada"
+  to = "/canada.html"
+  status = 200
+
+[[redirects]]
+  from = "/inglaterra"
+  to = "/inglaterra.html"
+  status = 200
+
+[[redirects]]
+  from = "/perfil"
+  to = "/perfil.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
